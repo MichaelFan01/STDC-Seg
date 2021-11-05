@@ -301,4 +301,5 @@ if __name__ == "__main__":
     x = torch.randn(1,3,224,224)
     y = model(x)
     torch.save(model.state_dict(), 'cat.pth')
-    print(y.size())
+    print(f'Number of output nodes: {len(y)}')
+    print('\n'.join([f'Output node {i}\'s size: {node.size()}' for i, node in enumerate(y)]))
