@@ -12,7 +12,9 @@
     "serve",
     "framework:STDC-Seg"
   ],
+  "poster": "https://github.com/supervisely-ecosystem/STDC-Seg/releases/download/v0.0.1/poster.jpg",
   "icon": "https://github.com/supervisely-ecosystem/STDC-Seg/releases/download/v0.0.1/icon.jpg",
+  "icon_cover": true,
   "description": "Deploy STDC-Seg models as a REST API service",
   "need_gpu": false,
   "gpu": "preferred",
