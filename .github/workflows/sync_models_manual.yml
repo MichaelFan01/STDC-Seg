@@ -1,0 +1,20 @@
+name: Release Models Manual
+on:
+  workflow_dispatch:
+    inputs:
+      models_path:
+        type: string
+        required: true
+      framework:
+        type: string
+        required: true
+
+jobs:
+  release-models:
+    uses: supervisely-ecosystem/workflows/.github/workflows/sync_models_common.yml@master
+    with:
+      MODELS_PATH: ${{ github.event.inputs.models_path }}
+      FRAMEWORK: ${{ github.event.inputs.framework }}
+      SERVER_ADDRESS: ${{ vars.SUPERVISELY_PROD_SERVER_ADDRESS }}
+    secrets:
+      API_TOKEN: ${{ secrets.SUPERVISELY_PROD_API_TOKEN }}

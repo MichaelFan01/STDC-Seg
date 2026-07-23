@@ -1,0 +1,85 @@
+{
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"name": "Uvicorn Serve",
+			"type": "debugpy",
+			"request": "launch",
+			"module": "uvicorn",
+			"args": [
+				"main:model.app",
+				"--host",
+				"0.0.0.0",
+				"--port",
+				"8000",
+				"--ws",
+				"websockets",
+				"--app-dir",
+				"supervisely_integration/serve"
+			],
+			"justMyCode": false,
+			"env": {
+				"PYTHONPATH": "${workspaceFolder}:${PYTHONPATH}",
+				"LOG_LEVEL": "DEBUG",
+				"DEBUG_APP_DIR": "app_data",
+				"DEBUG_WITH_SLY_NET": "1",
+				"APP_NAME": "Serve STDC-Seg"
+			}
+		},
+		{
+			"name": "Local Deploy",
+			"type": "debugpy",
+			"request": "launch",
+			"program": "${workspaceFolder}/supervisely_integration/serve/main.py",
+			"console": "integratedTerminal",
+			"justMyCode": false,
+			"args": [
+				"predict",
+				"supervisely_integration/demo/img/coco_sample.jpg"
+			],
+			"env": {
+				"PYTHONPATH": "${workspaceFolder}:${PYTHONPATH}",
+				"DEBUG_APP_DIR": "app_data",
+				"LOG_LEVEL": "DEBUG",
+				"TEAM_ID": "4",
+			}
+		},
+		{
+			"name": "Python: Current File",
+			"type": "debugpy",
+			"request": "launch",
+			"program": "${file}",
+			"console": "integratedTerminal",
+			"justMyCode": false,
+			"env": {
+				"PYTHONPATH": "${workspaceFolder}:${PYTHONPATH}",
+				"LOG_LEVEL": "DEBUG",
+				"DEBUG_APP_DIR": "app_data",
+			}
+		},
+		{
+			"name": "Serve headless",
+			"type": "debugpy",
+			"request": "launch",
+			"module": "uvicorn",
+			"args": [
+				"scripts.test_serve:model.app",
+				"--host",
+				"0.0.0.0",
+				"--port",
+				"8000",
+				"--ws",
+				"websockets",
+				"--app-dir",
+				"supervisely_integration/serve"
+			],
+			"justMyCode": false,
+			"env": {
+				"PYTHONPATH": "${workspaceFolder}:${PYTHONPATH}",
+				"LOG_LEVEL": "DEBUG",
+				"DEBUG_APP_DIR": "app_data",
+				"DEBUG_WITH_SLY_NET": "1",
+			}
+		}
+	]
+}

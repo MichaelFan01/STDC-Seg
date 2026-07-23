@@ -1,0 +1,35 @@
+name: Dummy Build App Image From Template
+
+on:
+  workflow_dispatch:
+    inputs:
+      tag_version:
+        description: "Tag version accepted for compatibility with manual build callers"
+        required: false
+      tag_ref_name:
+        description: "Accepted for compatibility; ignored by this placeholder"
+        required: false
+      enable_cve_checks:
+        description: "Accepted for compatibility; ignored by this placeholder"
+        required: false
+        type: boolean
+        default: false
+      skip_tag_check:
+        description: "Accepted for compatibility; ignored by this placeholder"
+        required: false
+        type: boolean
+        default: true
+      no_cache_requirements:
+        description: "Accepted for compatibility; ignored by this placeholder"
+        required: false
+        type: boolean
+        default: false
+
+jobs:
+  noop:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Confirm dispatch path
+        run: |
+          echo "Dummy workflow_dispatch placeholder for branch-local workflow testing."
+          echo "Replace this on the feature branch with the real reusable wrapper."

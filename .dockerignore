@@ -1,0 +1,9 @@
+.git
+.venv
+venv
+supervisely
+__pycache__/
+*.pyc
+*.pth
+*.pt
+*.ckpt

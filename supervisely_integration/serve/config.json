@@ -1,0 +1,30 @@
+{
+  "type": "app",
+  "version": "2.0.0",
+  "name": "Serve STDC-Seg",
+  "entrypoint": "python3 -m uvicorn main:model.app --host 0.0.0.0 --port 8000 --ws websockets --app-dir supervisely_integration/serve",
+  "port": 8000,
+  "categories": [
+    "neural network",
+    "images",
+    "videos",
+    "semantic segmentation",
+    "serve",
+    "framework:STDC-Seg"
+  ],
+  "description": "Deploy STDC-Seg models as a REST API service",
+  "need_gpu": false,
+  "gpu": "preferred",
+  "session_tags": ["deployed_nn"],
+  "community_agent": false,
+  "docker_image": "supervisely/stdc-seg:1.0.0",
+  "cuda_version": 12.8,
+  "task_location": "application_sessions",
+  "license": {
+    "type": "Apache-2.0"
+  },
+  "instance_version": "6.17.14",
+  "files": {
+    "models": "supervisely_integration/models.json"
+  }
+}

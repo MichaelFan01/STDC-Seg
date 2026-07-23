@@ -1,0 +1,62 @@
+[
+  {
+    "Model": "STDC2-Seg75",
+    "dataset": "Cityscapes",
+    "mIoU": 77.04,
+    "Size (W x H)": "1536x768",
+    "meta": {
+      "task_type": "semantic segmentation",
+      "model_name": "STDC2-Seg75",
+      "backbone": "STDCNet1446",
+      "input_size": [1536, 768],
+      "model_files": {
+        "checkpoint": "https://github.com/supervisely-ecosystem/STDC-Seg/releases/download/v0.0.1/stdc2_model_maxmIOU75.pth"
+      }
+    }
+  },
+  {
+    "Model": "STDC2-Seg50",
+    "dataset": "Cityscapes",
+    "mIoU": 77.04,
+    "Size (W x H)": "1024x512",
+    "meta": {
+      "task_type": "semantic segmentation",
+      "model_name": "STDC2-Seg50",
+      "backbone": "STDCNet1446",
+      "input_size": [1024, 512],
+      "model_files": {
+        "checkpoint": "https://github.com/supervisely-ecosystem/STDC-Seg/releases/download/v0.0.1/stdc2_model_maxmIOU50.pth"
+      }
+    }
+  },
+  {
+    "Model": "STDC1-Seg75",
+    "dataset": "Cityscapes",
+    "mIoU": 77.04,
+    "Size (W x H)": "1536x768",
+    "meta": {
+      "task_type": "semantic segmentation",
+      "model_name": "STDC1-Seg75",
+      "backbone": "STDCNet813",
+      "input_size": [1536, 768],
+      "model_files": {
+        "checkpoint": "https://github.com/supervisely-ecosystem/STDC-Seg/releases/download/v0.0.1/stdc1_model_maxmIOU75.pth"
+      }
+    }
+  },
+  {
+    "Model": "STDC1-Seg50",
+    "dataset": "Cityscapes",
+    "mIoU": 77.04,
+    "Size (W x H)": "1024x512",
+    "meta": {
+      "task_type": "semantic segmentation",
+      "model_name": "STDC1-Seg50",
+      "backbone": "STDCNet813",
+      "input_size": [1024, 512],
+      "model_files": {
+        "checkpoint": "https://github.com/supervisely-ecosystem/STDC-Seg/releases/download/v0.0.1/stdc1_model_maxmIOU50.pth"
+      }
+    }
+  }
+]
