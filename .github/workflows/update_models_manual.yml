@@ -1,0 +1,22 @@
+name: Update Models Manual
+on:
+  workflow_dispatch:
+    inputs:
+      framework:
+        description: "Framework of the models to update (e.g., YOLO)"
+        type: string
+        required: false
+      models_path:
+        description: "Path to the file models.json (e.g., supervisely_integration/models.json for YOLO)"
+        type: string
+        required: false
+
+jobs:
+  update-models:
+    uses: supervisely-ecosystem/workflows/.github/workflows/update_models_common.yml@master
+    with:
+      MODELS_PATH: ${{ github.event.inputs.models_path }}
+      FRAMEWORK: ${{ github.event.inputs.framework }}
+      SERVER_ADDRESS: ${{ vars.SUPERVISELY_PROD_SERVER_ADDRESS }}
+    secrets:
+      API_TOKEN: ${{ secrets.SUPERVISELY_PROD_API_TOKEN }}

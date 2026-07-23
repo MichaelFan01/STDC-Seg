@@ -1,0 +1,8 @@
+pretrained_models: true
+custom_models: false
+external_models: true
+external_model_options:
+  config: true
+  classes: false
+  task_types: ["semantic segmentation"]
+supported_runtimes: ["pytorch"]

@@ -1,0 +1,7 @@
+.venv
+venv
+supervisely
+__pycache__/
+*.pyc
+app_data
+.ruff_cache
