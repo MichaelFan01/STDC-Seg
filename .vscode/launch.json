@@ -23,7 +23,8 @@
 				"LOG_LEVEL": "DEBUG",
 				"DEBUG_APP_DIR": "app_data",
 				"DEBUG_WITH_SLY_NET": "1",
-				"APP_NAME": "Serve STDC-Seg"
+				"APP_NAME": "Serve STDC-Seg",
+				"TEAM_ID": "4"
 			}
 		},
 		{

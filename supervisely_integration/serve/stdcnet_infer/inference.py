@@ -10,6 +10,11 @@ from .model import BiSeNet
 
 _to_tensor = transforms.Compose([transforms.ToTensor()])
 
+
+class ModelConfigError(ValueError):
+    pass
+
+
 def load_model_config(path):
     import yaml
 
@@ -59,10 +64,22 @@ class STDCNetSegmenter:
             )
         if backbone not in ("STDCNet813", "STDCNet1446"):
             raise ValueError(f"Unsupported STDC backbone: {backbone}")
+        checkpoint_n_classes = self._infer_n_classes(state_dict)
+        if (
+            n_classes is not None
+            and checkpoint_n_classes is not None
+            and n_classes != checkpoint_n_classes
+        ):
+            raise ModelConfigError(
+                "External model configuration is incompatible with the checkpoint: "
+                f"SEG_CATEGORIES defines {n_classes} classes, but the checkpoint "
+                f"predicts {checkpoint_n_classes}. Update SEG_CATEGORIES and "
+                "SEG_COLORS in the YAML config to match the checkpoint outputs."
+            )
         self.backbone = backbone
         self.n_classes = (
             n_classes
-            or self._infer_n_classes(state_dict)
+            or checkpoint_n_classes
             or (len(cfg["SEG_CATEGORIES"]) if "SEG_CATEGORIES" in cfg else None)
         )
         if self.n_classes is None:

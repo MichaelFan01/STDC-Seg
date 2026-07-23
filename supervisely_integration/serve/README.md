@@ -1,6 +1,6 @@
 <div align="center" markdown>
 
-<img src=""/>
+<img src="https://private-user-images.githubusercontent.com/48913536/625805348-9d424b2a-75fd-408f-8bc8-379891a485ab.jpg?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3ODQ4MjE2MDMsIm5iZiI6MTc4NDgyMTMwMywicGF0aCI6Ii80ODkxMzUzNi82MjU4MDUzNDgtOWQ0MjRiMmEtNzVmZC00MDhmLThiYzgtMzc5ODkxYTQ4NWFiLmpwZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNjA3MjMlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjYwNzIzVDE1NDE0M1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTQ1NWM5ZTJiZjVlMGU0NTIxNWQ5MmM5MzdjMWFiN2UzN2I2MDAyYjIxMzBiODBmYmVlOTg5MDY0ZTU3MzY5ZGImWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JnJlc3BvbnNlLWNvbnRlbnQtdHlwZT1pbWFnZSUyRmpwZWcifQ.lCZWjyZDBs09Tc2L0_zBglICrY8S5reLBzpjcp200XY"/>
 
 # Serve STDC-Seg
 
@@ -93,21 +93,53 @@ An external model configuration must define:
 `SEG_COLORS` is optional. When omitted, the application generates a color
 palette automatically.
 
-Example configuration for a checkpoint trained with three output classes:
+Example configuration for the pretrained STDC2-Seg75 Cityscapes checkpoint:
 
 ```yaml
-NET_INP_WIDTH: 1024
-NET_INP_HEIGHT: 512
+NET_INP_WIDTH: 1536
+NET_INP_HEIGHT: 768
 
 SEG_CATEGORIES:
-  background: 0
-  road: 1
-  vehicle: 2
+  road: 0
+  sidewalk: 1
+  building: 2
+  wall: 3
+  fence: 4
+  pole: 5
+  traffic light: 6
+  traffic sign: 7
+  vegetation: 8
+  terrain: 9
+  sky: 10
+  person: 11
+  rider: 12
+  car: 13
+  truck: 14
+  bus: 15
+  train: 16
+  motorcycle: 17
+  bicycle: 18
 
 SEG_COLORS:
-  0: [0, 0, 0]
-  1: [128, 64, 128]
-  2: [0, 0, 142]
+  0: [128, 64, 128]
+  1: [244, 35, 232]
+  2: [70, 70, 70]
+  3: [102, 102, 156]
+  4: [190, 153, 153]
+  5: [153, 153, 153]
+  6: [250, 170, 30]
+  7: [220, 220, 0]
+  8: [107, 142, 35]
+  9: [152, 251, 152]
+  10: [70, 130, 180]
+  11: [220, 20, 60]
+  12: [255, 0, 0]
+  13: [0, 0, 142]
+  14: [0, 0, 70]
+  15: [0, 60, 100]
+  16: [0, 80, 100]
+  17: [0, 0, 230]
+  18: [119, 11, 32]
 ```
 
 The default Cityscapes configuration is available in

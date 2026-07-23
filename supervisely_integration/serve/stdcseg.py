@@ -1,10 +1,12 @@
 from typing import Dict, List
 
 import supervisely as sly
+from supervisely.app.exceptions import DialogWindowError
 from supervisely.nn.inference import ModelSource
 from supervisely.nn.prediction_dto import PredictionSegmentation
 
 from supervisely_integration.serve.stdcnet_infer import (
+    ModelConfigError,
     STDCNetSegmenter,
     load_model_config,
 )
@@ -69,14 +71,20 @@ class STDCSeg(sly.nn.inference.SemanticSegmentation):
                     "config for external models."
                 ) from error
 
-        segmenter = STDCNetSegmenter(
-            checkpoint_path,
-            device=device,
-            n_classes=len(classes),
-            backbone=backbone,
-            input_size=input_size,
-            config_path=config_path,
-        )
+        try:
+            segmenter = STDCNetSegmenter(
+                checkpoint_path,
+                device=device,
+                n_classes=len(classes),
+                backbone=backbone,
+                input_size=input_size,
+                config_path=config_path,
+            )
+        except ModelConfigError as error:
+            raise DialogWindowError(
+                "Model configuration does not match checkpoint",
+                str(error),
+            ) from error
 
         self.segmenter = segmenter
         self.classes = classes
