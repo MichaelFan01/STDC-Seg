@@ -12,7 +12,7 @@
     "serve",
     "framework:STDC-Seg"
   ],
-  "icon": "https://private-user-images.githubusercontent.com/48913536/625805382-8a86c5ec-383f-4bc1-8e9b-ffc68cf462ec.jpg?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3ODQ4MjE2MDMsIm5iZiI6MTc4NDgyMTMwMywicGF0aCI6Ii80ODkxMzUzNi82MjU4MDUzODItOGE4NmM1ZWMtMzgzZi00YmMxLThlOWItZmZjNjhjZjQ2MmVjLmpwZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNjA3MjMlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjYwNzIzVDE1NDE0M1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWRjZjEwYTI3YTZlOWI4MWU3Y2ExZmU3M2I2Y2M0ZmQ3Y2U0ZTI5OGFlYjViMTljYzllZWVmN2Q5YTljNGM0YTEmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JnJlc3BvbnNlLWNvbnRlbnQtdHlwZT1pbWFnZSUyRmpwZWcifQ.7EykQmOeF4fJxXxlO8muhjNzHiR0ZSuwFAnObbw52YE",
+  "icon": "https://github.com/supervisely-ecosystem/STDC-Seg/releases/download/v0.0.1/icon.jpg",
   "description": "Deploy STDC-Seg models as a REST API service",
   "need_gpu": false,
   "gpu": "preferred",
