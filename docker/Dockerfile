@@ -27,6 +27,6 @@ RUN pip install --no-cache-dir \
     --index-url https://download.pytorch.org/whl/cu128
 
 ## Supervisely Installation
-RUN pip install --no-cache-dir supervisely==6.74.15
+RUN pip install --no-cache-dir supervisely==6.74.5
 
-LABEL python_sdk_version=6.74.15
+LABEL python_sdk_version=6.74.5

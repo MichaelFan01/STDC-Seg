@@ -20,13 +20,13 @@
   "gpu": "preferred",
   "session_tags": ["deployed_nn"],
   "community_agent": false,
-  "docker_image": "supervisely/stdc-seg:1.0.0",
+  "docker_image": "supervisely/stdc-seg:6.74.5",
   "cuda_version": 12.8,
   "task_location": "application_sessions",
   "license": {
     "type": "MIT"
   },
-  "instance_version": "6.17.14",
+  "instance_version": "6.17.4",
   "files": {
     "models": "supervisely_integration/models.json"
   }
