@@ -24,7 +24,7 @@
   "cuda_version": 12.8,
   "task_location": "application_sessions",
   "license": {
-    "type": "Apache-2.0"
+    "type": "MIT"
   },
   "instance_version": "6.17.14",
   "files": {
